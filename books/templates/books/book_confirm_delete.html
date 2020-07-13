@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <h1>Deletar Livro</h1>
+        <form method="post">
+        {% csrf_token %}
+            <p>Tem certeza de que deseja excluir o livro: "{{ object }}" ?</p>           
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+{% endblock%}
